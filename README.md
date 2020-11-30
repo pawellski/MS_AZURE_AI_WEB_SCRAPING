@@ -8,6 +8,16 @@ Projekt polega na napisaniu algorytmu, identyfikującego elementy interaktywne d
 
 Dodatkowo algorytm zostanie poddany testowi na wybranym przez klienta sklepie internetowym w celu weryfikacji jego poprawnego działania. Opracowanie sposobu pozyskania danych do utworzenia modelu oraz testowania algorytmu zostanie wykonane z pomocą klienta.
 
+Uczestnicy | Rola | Link
+--- | --- | ---
+Paweł Skiba | |
+Anna Rosłan | |
+Krzysztof Anderson| |
+Michał Malinowski | |
+Krzysztof Móżdżyński | |
+Jakub Czajka | | https://github.com/kczaj
+
+Link: https://github.com/ekote/AI-on-Microsoft-Azure/blob/main/intro-inz/projects/Lingaro_DL.pdf
 
 ### Wymagania projeku
 #### Wymagania funkcjonalne
@@ -39,24 +49,24 @@ Dodatkowo algorytm zostanie poddany testowi na wybranym przez klienta sklepie in
 
 ### P3: (10.12)  
 
-* Wstępny research  
-* Przygotowanie listy pytań dla PO    
-* Przygotowanie zbioru danych uczących  
+- [ ] Wstępny research  
+- [ ] Przygotowanie listy pytań dla PO    
+- [ ] Przygotowanie zbioru danych uczących  
 
 ### P4: (7.01) 
 
-* Zaimplemetowanie kodu lokalnie
-* Uruchomienie testowej aplikacji na Azure
+- [ ] Zaimplemetowanie kodu lokalnie
+- [ ] Uruchomienie testowej aplikacji na Azure
 
 ### P5: (14.01) 
 
-* Testowanie aplikacji (ewentualne poprawki)  
-* Zaplanowanie wdrożenia  
+- [ ] Testowanie aplikacji (ewentualne poprawki)  
+- [ ] Zaplanowanie wdrożenia  
 
 ### P6: (21.01)  
 
-* Wdrożenie aplikacji na Azure oraz przetestowanie w nowym środowisku
+- [ ] Wdrożenie aplikacji na Azure oraz przetestowanie w nowym środowisku
 
 ### P7: (28.01)  
 
-* Prezentacja projektu
+- [ ] Prezentacja projektu
