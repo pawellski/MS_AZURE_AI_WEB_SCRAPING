@@ -13,7 +13,7 @@ Uczestnicy | Rola | Link
 Paweł Skiba | |
 Anna Rosłan | |
 Krzysztof Anderson| |
-Michał Malinowski | |
+Michał Malinowski | | https://github.com/redb3rry
 Krzysztof Móżdżyński | |
 Jakub Czajka | | https://github.com/kczaj
 
