@@ -10,11 +10,11 @@ Dodatkowo algorytm zostanie poddany testowi na wybranym przez klienta sklepie in
 
 Uczestnicy | Rola | Link
 --- | --- | ---
-Paweł Skiba | |https://github.com/pawellski
+Paweł Skiba | Leader |https://github.com/pawellski
 Anna Rosłan | | https://github.com/AnnaRoslan
 Krzysztof Anderson| | https://github.com/Krisu17
 Michał Malinowski | | https://github.com/redb3rry
-Krzysztof Móżdżyński | |
+Krzysztof Móżdżyński | | https://github.com/mozdzyk
 Jakub Czajka | | https://github.com/kczaj
 
 Link: https://github.com/ekote/AI-on-Microsoft-Azure/blob/main/intro-inz/projects/Lingaro_DL.pdf
