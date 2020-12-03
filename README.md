@@ -12,7 +12,7 @@ Uczestnicy | Rola | Link
 --- | --- | ---
 Paweł Skiba | |https://github.com/pawellski
 Anna Rosłan | |
-Krzysztof Anderson| |
+Krzysztof Anderson| | https://github.com/Krisu17
 Michał Malinowski | | https://github.com/redb3rry
 Krzysztof Móżdżyński | |
 Jakub Czajka | | https://github.com/kczaj
