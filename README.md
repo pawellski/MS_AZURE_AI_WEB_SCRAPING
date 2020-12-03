@@ -11,7 +11,7 @@ Dodatkowo algorytm zostanie poddany testowi na wybranym przez klienta sklepie in
 Uczestnicy | Rola | Link
 --- | --- | ---
 Paweł Skiba | |https://github.com/pawellski
-Anna Rosłan | |
+Anna Rosłan | | https://github.com/AnnaRoslan
 Krzysztof Anderson| | https://github.com/Krisu17
 Michał Malinowski | | https://github.com/redb3rry
 Krzysztof Móżdżyński | |
