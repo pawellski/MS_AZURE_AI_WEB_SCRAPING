@@ -10,7 +10,7 @@ Dodatkowo algorytm zostanie poddany testowi na wybranym przez klienta sklepie in
 
 Uczestnicy | Rola | Link
 --- | --- | ---
-Paweł Skiba | |
+Paweł Skiba | |https://github.com/pawellski
 Anna Rosłan | |
 Krzysztof Anderson| |
 Michał Malinowski | | https://github.com/redb3rry
@@ -32,7 +32,7 @@ Link: https://github.com/ekote/AI-on-Microsoft-Azure/blob/main/intro-inz/project
 * System będzie w stanie przetworzyć dowolną stronę internetową.
 
 ## Diagram
-<img src="./azureDiagram.svg">
+<img src="./sequenceDiagram.svg">
 
 ## Stos technologiczny
 
