@@ -17,7 +17,7 @@ delete_folder = 'runs'
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", path="")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
@@ -54,6 +54,6 @@ def url():
     os.remove(path)
     proccessed_image = result_folder + file_name
     
-    return send_file(proccessed_image)
+    return render_template("index.html", path=proccessed_image)
     
 
