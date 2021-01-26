@@ -1,15 +1,19 @@
-from flask import Flask, render_template, make_response, request
+from flask import Flask, render_template, make_response, request, send_file
 from selenium import webdriver
 from selenium.webdriver.support import expected_conditions as EC
-import os
+import os, shutil
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--headless')
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
-driver = webdriver.Chrome('driver/chromedriver.exe',chrome_options=chrome_options)
+driver = webdriver.Chrome('driver/chromedriver',chrome_options=chrome_options)
 
 app = Flask(__name__, static_url_path="")
+
+screen_folder = 'screen/'
+result_folder = 'runs/detect/exp/'
+delete_folder = 'runs'
 
 @app.route("/")
 def index():
@@ -18,7 +22,7 @@ def index():
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
 
-@app.route('/url')
+@app.route('/url', methods=['POST'])
 def url():
     url = request.form.get('url')
 
@@ -32,21 +36,24 @@ def url():
     try:
         driver.get(url)
     except Exception:
-        return make_response("Cant open website", 503)
+        return make_response("Cannot open website", 503)
     width = 1920
     height = 1080
     driver.set_window_size(width, height)
-
-    path = folder + file_name
-
+    if os.path.isdir(delete_folder):
+        shutil.rmtree(delete_folder)
+    path = screen_folder + file_name
     try:
         driver.save_screenshot(path)
         print("Saved png for " + url)
     except Exception:
-        return make_response('Rrror with save picture',503)
+        return make_response('Error with save picture',503)
 
-    os.system(f"python YOLO/detect.py --weights YOLO/elements-model/best.pt --img 1920 --source {path} ")
+    os.system(f"python3 YOLO/detect.py --weights YOLO/elements-model/best.pt --source {path} ")
+
+    os.remove(path)
+    proccessed_image = result_folder + file_name
     
-    return make_response('OK', 200)
+    return send_file(proccessed_image)
     
 
