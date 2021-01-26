@@ -1,4 +1,4 @@
-let baseURL = "https://find-my-button.azurewebsites.net/"
+let baseURL = "http://127.0.0.1:5000/"
 window.onload = () => {
 
     document.getElementById('submit-btn').addEventListener("click", (e) => {
@@ -7,12 +7,12 @@ window.onload = () => {
     });
 }
 
-function submit() {
+async function submit() {
     console.log("click")
     let formData = new FormData(document.getElementById('form'))
     try{
         let result = await getResult(formData)
-        console.log("Działa")
+        document.write(result)
     } catch (err) {
         console.log(err)
     }
@@ -28,7 +28,7 @@ async function getResult(formData){
 
     let res = await fetch(requestURL, requestParam)
     if (res.status === 200) {
-        return res.body
+        return await res.text()
     } else {
         throw res.status
     }

@@ -43,17 +43,19 @@ def url():
     if os.path.isdir(delete_folder):
         shutil.rmtree(delete_folder)
     path = screen_folder + file_name
+    
     try:
         driver.save_screenshot(path)
         print("Saved png for " + url)
     except Exception:
         return make_response('Error with save picture',503)
 
-    os.system(f"python3 YOLO/detect.py --weights YOLO/elements-model/best.pt --source {path} ")
+    os.system(f"python3 YOLO/detect.py --weights YOLO/elements-model/best.pt --img 1920 --source {path} ")
 
     os.remove(path)
     proccessed_image = result_folder + file_name
-    
-    return render_template("index.html", path=proccessed_image)
+    new_result_folder = "static/results/"
+    os.rename(proccessed_image, new_result_folder+file_name)
+    return render_template("index.html", path="/results/"+file_name)
     
 
