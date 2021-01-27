@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function (event) {
     document.getElementById("resultImage").style.display = "none";
+    document.getElementById("spinnerId").style.display = "none";
 });
 
 
@@ -12,6 +13,7 @@ window.onload = () => {
         let button = document.getElementById("submit-btn");
         button.disabled = true;
         document.getElementById("resultImage").style.display = "none";
+        document.getElementById("spinnerId").style.display = "";
         submit()
     });
 }
@@ -22,6 +24,7 @@ async function submit() {
     try{
         let result = await getResult(formData);
         let resultImage = document.getElementById("resultImage");
+        document.getElementById("spinnerId").style.display = "none";
         resultImage.setAttribute("src", result);
         document.getElementById("resultImage").style.display = "";
         let button = document.getElementById("submit-btn");
