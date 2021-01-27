@@ -1,8 +1,17 @@
+document.addEventListener('DOMContentLoaded', function (event) {
+    document.getElementById("resultImage").style.display = "none";
+});
+
+
+
 let baseURL = "http://127.0.0.1:5000/"
 window.onload = () => {
 
     document.getElementById('submit-btn').addEventListener("click", (e) => {
-        e.preventDefault()
+        e.preventDefault();
+        let button = document.getElementById("submit-btn");
+        button.disabled = true;
+        document.getElementById("resultImage").style.display = "none";
         submit()
     });
 }
@@ -11,8 +20,12 @@ async function submit() {
     console.log("click")
     let formData = new FormData(document.getElementById('form'))
     try{
-        let result = await getResult(formData)
-        document.write(result)
+        let result = await getResult(formData);
+        let resultImage = document.getElementById("resultImage");
+        resultImage.setAttribute("src", result);
+        document.getElementById("resultImage").style.display = "";
+        let button = document.getElementById("submit-btn");
+        button.disabled = false;
     } catch (err) {
         console.log(err)
     }

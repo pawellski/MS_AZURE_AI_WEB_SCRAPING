@@ -56,6 +56,7 @@ def url():
     proccessed_image = result_folder + file_name
     new_result_folder = "static/results/"
     os.rename(proccessed_image, new_result_folder+file_name)
-    return render_template("index.html", path="/results/"+file_name)
+
+    return "/results/"+file_name
     
 
